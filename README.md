@@ -1,0 +1,17 @@
+# PassCard
+
+This tool was inspired by the [“DSIN Passwortkarte”](https://www.sicher-im-netz.de/dsin-passwortkarte).
+
+It is fully published as open source without any waranty. If using the tool, please be aware of the rules to use it securely. Especially, if you print your passcard ... **don't ever mark your password!** It's meant to be remembered by you – or at least the “path” on the card you used to create it.
+
+The PHP app is located in the `app` directory of this repo. The repo itself is extended to build a (Docker) container image to allow you to run your own copy of the software out of the box.
+
+For special usage of the tool, please see the [application `README.md`](app/README.md) file for further information.
+
+## Demo
+
+A running instance of this tool can be found at [passcard.dev-ops.fk.ms](https://passcard.dev-ops.fk.ms). There is one special config deployed - so if you head over to [https://passcard.dev-ops.fk.ms/?conf=alphabet](https://passcard.dev-ops.fk.ms/?conf=alphabet), you'll be presented a passcard only using the alphabet `A-Z` and `a-z`.
+
+## last built
+
+0000-00-00 00:00:00
