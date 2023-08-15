@@ -5,6 +5,7 @@
 
 ## COMPOSER
 composer.phar
-!/vendor
-/vendor/*
-!/vendor/passcard
+composer.lock
+!/app/vendor
+/app/vendor/*
+!/app/vendor/passcard
