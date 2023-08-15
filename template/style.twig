@@ -1,23 +1,34 @@
+{% set color1 = "#FB5F93" %}
+{% set color2 = "#85FFE6" %}
+{% set color3 = "black" %}
+{% set color4 = "#56A5E3" %}
+{% set color5 = "#BB56E3" %}
+{% set c5t = "white" %}
+
+body {
+    margin-bottom: 4ex;
+}
+
 #pwcard td, #pwcard th {
-    border: 1px solid #273D4C;
+    border: 1px solid {{ color1 }};
     font-size: 1.2em;
     padding: .25rem !important;
 }
 
 #pwcard td:nth-of-type({{ env('MATRIXSTROKE')|default(3) }}n+{{ env('MATRIXSTROKE')|default(3) + 1 }}), #pwcard th:nth-of-type({{ env('MATRIXSTROKE')|default(3) }}n+{{ env('MATRIXSTROKE')|default(3) + 1 }}), #pwcard td:nth-last-child(2), #pwcard th:nth-last-child(2), #pwcard td:first-of-type, #pwcard th:first-of-type {
-    border-right: 4px solid #273D4C;
+    border-right: 4px solid {{ color1 }};
 }
 
 #pwcard td:last-of-type, #pwcard th:last-of-type {
-    border-right: 1px solid #273D4C;
+    border-right: 1px solid {{ color1 }};
 }
 
 #pwcard tbody tr:nth-of-type({{ env('MATRIXSTROKE')|default(3) }}n) td, #pwcard th {
-    border-bottom: 4px solid #273D4C;
+    border-bottom: 4px solid {{ color1 }};
 }
 
 #pwcard tbody tr:last-of-type td {
-    border-bottom: 4px solid #273D4C;
+    border-bottom: 4px solid {{ color1 }};
 }
 
 #pwcard td, #pwcard th {
@@ -26,16 +37,16 @@
 
 #pwcard th, #pwcard tfoot, #pwcard .mainpres {
     font-weight: bold;
-    color: #fff;
-    background: #927A19;
+    color: {{ color3 }};
+    background: {{ color2 }};
 }
 
 #pwcard .plain {
-    background: #273D4C;
+    background: {{ color1 }};
 }
 
 #pwcard>tbody>tr:nth-of-type(even) {
-    background: #E9E1CA;
+    background: {{ color4 }};
 }
 
 summary {
@@ -52,8 +63,8 @@ summary:focus {
 }
 
 .jumbotron {
-    background: #44697D;
-    color: white;
+    background: {{ color5 }};
+    color: {{ c5t }};
     font-family: Univers, Arial;
     padding: 10px;
 }
@@ -74,13 +85,14 @@ img {
 
 .btn {
     margin-top: 10px;
-    background: #44697D;
-    border: #44697D;
+    background: {{ color5 }};
+    border: {{ color5 }};
     float: right;
+    color: {{ c5t }}
 }
 
 .btn:hover {
-    background: #9A8419;
+    background: {{ color5 }};
 }
 
 .printOnly {
@@ -110,28 +122,28 @@ img {
 
     #pwcard td, #pwcard th {
      -webkit-print-color-adjust:exact;
-    border: 1px solid #273D4C !important;
+    border: 1px solid {{ color1 }} !important;
     font-size: 1.2em !important;
     padding: .25rem !important;
     }
 
     #pwcard td:nth-of-type({{ env('MATRIXSTROKE')|default(3) }}n+{{ env('MATRIXSTROKE')|default(3) + 1 }}), #pwcard th:nth-of-type({{ env('MATRIXSTROKE')|default(3) }}n+{{ env('MATRIXSTROKE')|default(3) + 1 }}), #pwcard td:nth-last-child(2), #pwcard th:nth-last-child(2), #pwcard td:first-of-type, #pwcard th:first-of-type {
-        border-right: 4px solid #273D4C !important;
+        border-right: 4px solid {{ color1 }} !important;
         -webkit-print-color-adjust:exact;
     }
 
     #pwcard td:last-of-type, #pwcard th:last-of-type {
-        border-right: 1px solid #273D4C !important;
+        border-right: 1px solid {{ color1 }} !important;
          -webkit-print-color-adjust:exact;
     }
 
     #pwcard tbody tr:nth-of-type({{ env('MATRIXSTROKE')|default(3) }}n) td, #pwcard th {
-        border-bottom: 4px solid #273D4C !important;
+        border-bottom: 4px solid {{ color1 }} !important;
          -webkit-print-color-adjust:exact;
     }
 
     #pwcard tbody tr:last-of-type td {
-        border-bottom: 4px solid #273D4C !important;
+        border-bottom: 4px solid {{ color1 }} !important;
          -webkit-print-color-adjust:exact;
     }
 
@@ -142,18 +154,18 @@ img {
 
     #pwcard th, #pwcard tfoot, #pwcard .mainpres {
         font-weight: bold !important;
-        color: #fff !important;
-        background: #927A19 !important;
+        color: {{ color3 }} !important;
+        background: {{ color2 }} !important;
          -webkit-print-color-adjust:exact;
     }
 
     #pwcard .plain {
         -webkit-print-color-adjust:exact;
-        background: #273D4C !important;
+        background: {{ color1 }} !important;
     }
 
     #pwcard>tbody>tr:nth-of-type(even) {
         -webkit-print-color-adjust:exact;
-        background: #E9E1CA !important;
+        background: {{ color4 }} !important;
     }
 }
