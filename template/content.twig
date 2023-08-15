@@ -1,0 +1,25 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+    <div class="jumbotron">
+        <h1>Passwort-Karte</h1>
+        <p>Die Passwort-Karte ermöglicht eine Passwortbildung, die den Regeln eines sicheren Passworts entspricht. Darüber hinaus erleichtert sie das Merken und Aufbewahren der Passwörter. Mit unserem Generator können Sie ihre eigene Passwortekarte erstellen und ausdrucken. Jede Karte ist eine einmalige Kombination aus Koordinatensystem und angeordneten Zeichen. Die Regeln zur genauen Verwendung finden Sie unten.</p>
+    </div>
+    
+    {% if alerts is not empty %}
+        {% for alert in alerts %}
+        <div class="alert alert-{{ alert.type|default('info') }}" role="alert">
+            {% if alert.strong is not empty %}<strong>{{ alert.strong }}</strong>{% endif %} {{ alert.message }}
+        </div>
+        {% endfor %}
+    {% endif %}
+    {% block passcard %}{% endblock %}
+    {% block additionalinformation %}{% endblock %}
+    <button class="btn btn-primary hidden-print" aria-pressed="true" onclick="window.print()">
+        <span class="glyphicon glyphicon-print"></span>
+        Print
+    </button>
+{% endblock %}
+    
+    

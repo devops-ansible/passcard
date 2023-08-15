@@ -1,0 +1,10 @@
+## .ENV
+.env*
+!.env.example
+.idea
+
+## COMPOSER
+composer.phar
+!/vendor
+/vendor/*
+!/vendor/passcard

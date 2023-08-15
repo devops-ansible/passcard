@@ -1,0 +1,65 @@
+{% extends 'content.twig' %}
+
+
+{% block passcard %}
+    <table class="table table-bordered centered" id="pwcard">
+        <thead>
+            <tr>
+                <th class="plain"></th>
+                {% for item in colIdent %}
+                    <th class="mainpres">{{ item }}</th>
+                {% endfor %}
+                <th class="plain"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for key, row in rows %}
+            <tr>
+                <td class="mainpres">{{ rowIdent[key] }}</td>
+                {% for col in row %}
+                    <td>
+                        {{ col }}
+                    </td>
+                {% endfor %}
+                <td class="mainpres">{{ rowIdent[key] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="plain"></td>
+                {% for item in colIdent %}
+                    <td class="mainpres">{{ item }}</td>
+                {% endfor %}
+                <td class="plain"></td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}
+
+
+{% block additionalinformation %}
+    <details>
+        <summary>Regeln für den Gebrauch</summary>
+        <ol>
+            <li><strong>Einstiegspunkt</strong> wählen (z.B. <em>M10</em>)</li>
+            <li><strong>Passwort</strong> bilden (z.B. 2 Felder nach oben, 5 Felder nach links, bis <em>H8</em>)</li>
+            <li><strong>Merken:</strong> Einstieg, Verlauf und Ausstiegspunkt</li>
+        </ol>
+    </details>
+    <details>
+        <summary>wichtige Regeln für Passworte</summary>
+        <ul>
+            <li><strong>Länge:</strong> Das Passwort ist mindestens 8 Zeichen lang.</li>
+            <li><strong>Kombinationen:</strong> Das Passwort kombiniert Buchstaben, Ziffern und bestenfalls Sonderzeichen.</li>
+        </ul>
+    </details>
+    <details>
+        <summary>Vorteile einer Passwort-Karte</summary>
+        <ul>
+            <li><strong>Sicheres Passwort:</strong> Kreative Passworte finden, die sicher sind.</li>
+            <li><strong>Einfaches Merken:</strong> Statt eines komplizierten Passwortes nur drei Dinge merken: Anfangspunkt, Verlauf und Ausstiegspunkt.</li>
+            <li><strong>Kein Verstecken:</strong> Die Karte bzw. ein Ausdruck der Karte kann sichtbar liegen gelassen werden – sofern das Passwort nicht markiert ist.</li>
+        </ul>
+    </details>
+{% endblock %}

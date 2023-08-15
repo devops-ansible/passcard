@@ -1,0 +1,16 @@
+{
+    "name": "macwinnie/pwcard",
+    "description": "Tool for building up a password card table",
+    "type": "project",
+    "require": {
+        "php": "^8",
+        "vlucas/phpdotenv": "^5",
+        "twig/twig": "^3"
+    },
+    "authors": [
+        {
+            "name": "macwinnie",
+            "email": "dev@macwinnie.me"
+        }
+    ]
+}
