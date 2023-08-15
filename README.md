@@ -10,7 +10,7 @@ For special usage of the tool, please see the [application `README.md`](app/READ
 
 ## Demo
 
-A running instance of this tool can be found at [passcard.dev-ops.fk.ms](https://passcard.dev-ops.fk.ms). There is one special config deployed - so if you head over to [https://passcard.dev-ops.fk.ms/?conf=alphabet](https://passcard.dev-ops.fk.ms/?conf=alphabet), you'll be presented a passcard only using the alphabet `A-Z` and `a-z`.
+A running instance of this tool can be found at [passcard.dev-ops.fk.ms](https://passcard.dev-ops.fk.ms). There is one special config deployed - so if you head over to [https://passcard.dev-ops.fk.ms/?conf=lowercase](https://passcard.dev-ops.fk.ms/?conf=lowercase), you'll be presented a passcard only using the lowercase alphabet `a-z` without any additions.
 
 ## last built
 
