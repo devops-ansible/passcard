@@ -80,7 +80,8 @@ class PassCard {
                 $char = NULL;
 
                 if ($this->colChar != NULL) {
-                    $this->colIdent [] = ($this->colChar++);
+                    $this->colIdent[] = $this->colChar;
+                    $this->colChar = str_increment($this->colChar);
                 }
 
                 do {
